@@ -8,7 +8,7 @@ public:
     int myAtoi(string s) {
         bool isNegative=false;
         bool signencountered=false; 
-        int length=s.size();
+        //int length=s.size();
         int j=0;
         int result=0;
 
@@ -23,7 +23,7 @@ public:
             j++;
         }
 
-        for(int i=j; i<length;i++){
+        for(int i=j; i<s.size();i++){
             
             if(s[i] == ' '){
                 break;
