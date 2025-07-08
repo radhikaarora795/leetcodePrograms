@@ -25,3 +25,5 @@ int main() {
     
     return 0;
 }
+
+// calculate manually and it turns out to be fibonacci
