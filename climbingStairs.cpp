@@ -21,7 +21,7 @@ public:
 
 int main() {
     Solution s;
-    cout<<s.climbStairs(3);
+    cout<<s.climbStairs(5);
     
     return 0;
 }
