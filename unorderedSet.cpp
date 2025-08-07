@@ -12,7 +12,8 @@ int main() {
     /*
     New elements can be inserted into unordered set using insert() method. We cannot specify the position to insert the element as it is automatically decided by its hashed value.
     */
-    set.insert(6);
+    auto it=set.insert(5);
+    cout<<it.second<<endl;
 
     for(auto x:set){
         cout<<x<<" ";
@@ -44,7 +45,7 @@ int main() {
     // delete elements
     /* Elements can be removed from the unordered set using erase() method. We can erase elements either by value or by position.*/ 
 
-    set.erase(6);
+    /*set.erase(6);
 
     for(auto x:set){
         cout<<x<<" ";
@@ -54,7 +55,7 @@ int main() {
     set.erase(set.begin());
     for(auto x:set){
         cout<<x<<" ";
-    }
+    }*/
 
     return 0;
 }

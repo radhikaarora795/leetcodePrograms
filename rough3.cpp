@@ -82,7 +82,7 @@ public:
 };
 
 int main() {
-    Solution s;
+    //Solution s;
     // vector<int> gas={2,3,4};
     // vector<int> cost={3,4,3};
     //cout<<s.canCompleteCircuit(gas,cost);
@@ -90,7 +90,7 @@ int main() {
     // vector<int> nums={1,2,1,3,6,5,6,6,4};
     // cout<<s.findPeakElement(nums);
 
-    cout<<s.climbStairs(3);
+    //cout<<s.climbStairs(3);
 
     return 0;
 }

@@ -58,7 +58,7 @@ public:
 int main() {
     Solution s;
     vector<int> start={1,2};
-    vector<int> end={100,99};
+    vector<int> end={100,99 };
     cout<<s.maxMeetings(start,end);
     
     return 0;

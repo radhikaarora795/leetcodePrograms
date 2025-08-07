@@ -1,10 +1,25 @@
-ListNode* middleNode(ListNode* head) {
-        ListNode *fast=head;
-        ListNode *slow=head;
+class Solution {
+public:
+    bool checkDivisibility(int n) {
+        int x=0;
+        int sum=0;
+        int product=1;
+        int save=n;
 
-        while(fast != nullptr && fast->next !=nullptr){
-            fast=fast->next->next;
-            slow=slow->next;
+        while(n>0){
+            x=n%10;
+            sum=sum+x;
+            product=product*x;
+            n=n/10;
         }
-        return slow;
+        
+        int total=sum+product;
+
+        if(save%total == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
+};

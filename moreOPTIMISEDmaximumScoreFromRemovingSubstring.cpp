@@ -18,7 +18,7 @@ public:
         // First pass: remove higher scoring pattern
         for (char ch : s) {
             st += ch;
-            int len = st.size();
+            int len = st.size(); 
             if (len >= 2 && st[len - 2] == first[0] && st[len - 1] == first[1]) {
                 st.pop_back();
                 st.pop_back();
