@@ -1,3 +1,8 @@
+#include <iostream>
+#include <vector>
+#include <unordered_map>
+using namespace std;
+
 class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {
@@ -20,3 +25,11 @@ public:
         return count;
     }
 };
+
+int main() {
+    Solution s;
+    vector<int> nums={1,2,3};
+    cout<<s.subarraySum(nums,3);
+    
+    return 0;
+}
