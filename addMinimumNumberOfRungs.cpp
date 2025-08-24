@@ -37,7 +37,7 @@ public:
 int main() {
     Solution s;
     vector<int> v={3,6};
-    cout<<s.addRungs(v,1);
+    cout<<s.addRungs(v,1); 
     
     return 0;
 }

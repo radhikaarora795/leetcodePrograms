@@ -4,6 +4,7 @@ using namespace std;
 /* use Floyd's cycle algorithm 
 two pointers: slow=slow->next;
 fast=fast->next->next (linked list)
+no extra space used
 */
 
 class Solution {
@@ -25,8 +26,8 @@ public:
         int fast=sumSquares(n);
         // Loop until the fast pointer reaches 1 (happy) or both pointers meet (cycle)
         while(fast!=1 && fast!=slow){
-            slow=sumSquares(slow);
-            fast=sumSquares(sumSquares(fast));
+            slow=sumSquares(slow);              // slow=slow->next;
+            fast=sumSquares(sumSquares(fast));  //fast=fast->next->next;
         }
         if(fast == 1){
             return true;

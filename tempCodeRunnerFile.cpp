@@ -1,22 +1,27 @@
 class Solution {
 public:
-    int subarraySum(vector<int>& nums, int k) {
-        unordered_map<int,int> map;
-        map[0]=1;
-        // This handles the case where the prefix sum itself equals k,
-        // i.e., a subarray that starts from index 0 and sums to k.
-        int sum=0;
-        int count=0;
+    int searchInsert(vector<int>& nums, int target) {
+        int beg=0;
+        int end=nums.size()-1;
+        int mid;
 
-        for(int n:nums){
-            sum+=n;
-
-            if(map.find(sum-k) != map.end()){
-                count+=map[sum-k];
+        while(end>=beg){
+            mid=(beg+end)/2;
+            if(nums[mid]==target){
+                return mid;
             }
-
-            map[sum]++;
+            else if(nums[mid]<target){
+                beg=mid+1;
+            }
+            else{
+                end=mid-1;
+            }
         }
-        return count;
+        return beg;
     }
+    /*
+    If the target is not found in the list, the while loop will terminate when beg is greater than 
+    end. At this point, beg will be the index where the target should be inserted to maintain the 
+    sorted order. We return beg as the insertion point.
+    */
 };
